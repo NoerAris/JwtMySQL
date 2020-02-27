@@ -12,8 +12,6 @@ import com.polls.model.MasterUser;
 
 public class UserPrincipal implements UserDetails {
 
-	private static final long serialVersionUID = 1L;
-
 	private Long id;
 	
 	private String name;

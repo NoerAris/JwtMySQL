@@ -44,7 +44,7 @@ public class MasterUser extends DateAudit {
 	private String email;
 	
 	@NotBlank
-	@Size(max = 50)
+	@Size(max = 100)
 	private String password;
 	
 	@ManyToMany(fetch = FetchType.LAZY)
@@ -52,6 +52,10 @@ public class MasterUser extends DateAudit {
 		joinColumns = @JoinColumn(name = "user_id"),
 		inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<Role>();
+
+	public MasterUser() {
+		
+	}
 
 	public MasterUser(String name, String username, String email, String password) {
 		this.name = name;

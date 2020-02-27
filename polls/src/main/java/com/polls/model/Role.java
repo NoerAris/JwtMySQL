@@ -22,6 +22,10 @@ public class Role {
 	@Size(max = 50)
 	private RoleName name;
 
+	public Role() {
+		
+	}
+
 	public Long getId() {
 		return id;
 	}
